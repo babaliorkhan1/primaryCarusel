@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        button{
+            position: absolute;
+            top: 42px;
+        }
+        button:first-child{
+            left: 0;
+            z-index: 10;
+        }
+        button:last-child{
+            right: 0;
+        }
+        .window{
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            margin: 100px;
+            position: relative;
+        }
+        .slides{
+            display: flex;
+            width: fit-content;
+            position: absolute;
+            transition: 0.4s; 
+
+
+        }
+        .slide{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slide:nth-child(1){
+            background-color:red ;
+        }
+        .slide:nth-child(2){
+            background-color:rebeccapurple ;
+        }
+        .slide:nth-child(3){
+            background-color:blue ;
+        }
+        .slide:nth-child(4){
+            background-color: lawngreen;
+        }
+        .slide:nth-child(5){
+            background-color:fuchsia ;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <button><</button>
+        <div class="slides">
+            <div class="slide">1</div>
+            <div class="slide">2</div>
+            <div class="slide">3</div>
+            <div class="slide">4</div>
+            <div class="slide">5</div>
+        </div>
+        <button>></button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
